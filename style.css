@@ -1,0 +1,192 @@
+/* ========== COLOR VARIABLES ========== */
+:root {
+  --primary: #2a9d8f;
+  --secondary: #264653;
+  --light: #f8f9fa;
+  --dark: #212529;
+}
+
+/* ========== GLOBAL RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== BODY STYLES ========== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* ========== CONTAINER ========== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('assects/pexels-freestockpro-3278215.jpg') center/cover no-repeat;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 1rem auto 2rem;
+}
+
+/* ========== BUTTONS ========== */
+.btn {
+  padding: 10px 25px;
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--secondary);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+
+.btn-outline:hover {
+  background-color: #fff;
+  color: var(--secondary);
+}
+
+/* ========== AUTHENTICATION LAYOUT ========== */
+.auth-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Left image side (hidden on small screens) */
+.auth-image {
+  flex: 1;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('assects/chirag-vashist-mnqLnEBHMp8-unsplash.jpg') center/cover no-repeat;
+  display: none;
+}
+
+/* Right form side */
+.auth-form {
+  flex: 1;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-brand {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.auth-brand h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--primary);
+}
+
+/* ========== FORM ELEMENTS ========== */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.25);
+}
+
+.radio-group {
+  display: flex;
+  gap: 15px;
+}
+
+.form-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form-footer a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ========== FLEX ROW ========== */
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ========== MEDIA QUERIES ========== */
+/* Show auth image only on wider screens */
+@media (min-width: 768px) {
+  .auth-image {
+    display: block;
+  }
+}
+#places-india select {
+  background-color: #e8f8f5;
+  border: 1px solid var(--primary);
+  transition: 0.3s;
+}
+
+#places-india select:focus {
+  box-shadow: 0 0 5px rgba(42, 157, 143, 0.4);
+}
+
+/* Smooth fade in */
+#places-india {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}

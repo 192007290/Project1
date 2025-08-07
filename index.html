@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Travel Blog</title>
+
+  <!-- CSS File -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section id="homepage" class="hero">
+    <div class="container hero-content">
+      <h1>Travel Diaries</h1>
+      <p>
+        Discover captivating travel stories, breathtaking destinations, and insider tips from around the globe
+      </p>
+      <div>
+        <a href="#signup" class="btn">Join Our Community</a>
+        <a href="#" class="btn btn-outline" onclick="showLogin()">Login</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SIGNUP SECTION ================= -->
+  <section id="signup" class="auth-container" style="display: none;">
+    <div class="auth-image"></div>
+
+    <div class="auth-form">
+      <div class="auth-brand">
+        <h2>Join Wanderlust Chronicles</h2>
+        <p>Create your free account</p>
+      </div>
+
+      <form id="signup-form">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" class="form-control" required />
+        </div>
+
+        <div class="form-group">
+          <label>Username</label>
+          <input type="text" class="form-control" required />
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" class="form-control" required />
+        </div>
+
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" class="form-control" required />
+        </div>
+
+        <div class="form-group">
+          <label>Confirm Password</label>
+          <input type="password" class="form-control" required />
+        </div>
+
+        <div class="form-group" id="places-india" style="display: block;">
+    <label>Places you want to visit in India</label>
+    <select class="form-control">
+        <option>India</option>
+      <option>Goa</option>
+      <option>Manali</option>
+      <option>Jaipur</option>
+      <option>Kerala</option>
+      <option>Varanasi</option>
+      <option>Ladakh</option>
+      <option>Rishikesh</option>
+    </select>
+  </div>
+
+  <!-- ... Remaining form fields ... -->
+  <div class="form-group">
+    <label>Traveller Type</label>
+    <div class="radio-group">
+      <label><input type="radio" name="traveller-type" checked> Adventurer</label>
+      <label><input type="radio" name="traveller-type"> Explorer</label>
+      <label><input type="radio" name="traveller-type"> Backpacker</label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <input type="checkbox" required> I agree to the terms and conditions
+  </div>
+
+  <button class="btn" type="submit">Sign Up</button>
+</form>
+      <div class="form-footer">
+        Already have an account? 
+        <a href="#" onclick="showLogin()">Login here</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LOGIN SECTION ================= -->
+  <section id="login" class="auth-container" style="display: none;">
+    <div class="auth-image"></div>
+
+    <div class="auth-form">
+      <div class="auth-brand">
+        <h2>Welcome Back</h2>
+        <p>Login to your account</p>
+      </div>
+
+      <form id="login-form">
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" class="form-control" required />
+        </div>
+
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" class="form-control" required />
+        </div>
+
+        <div class="form-group row">
+          <label><input type="checkbox" /> Remember me</label>
+          <a href="#">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn">Login</button>
+      </form>
+
+      <div class="form-footer">
+        Don't have an account? 
+        <a href="#" onclick="showSignup()">Sign up here</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script src="script.js"></script>
+</body>
+</html>
